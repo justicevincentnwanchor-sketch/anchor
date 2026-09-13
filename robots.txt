@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://justicevincentnwanchor-sketch.github.io/anchor/sitemap.xml

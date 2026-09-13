@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#173b32" />
+    <meta name="description" content="Zuros Browser is a clean start page for searching, saving ideas, and finding your way back to the things you use." />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://justicevincentnwanchor-sketch.github.io/anchor/" />
+    <meta property="og:title" content="Zuros Browser" />
+    <meta property="og:description" content="A clean place to browse." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://justicevincentnwanchor-sketch.github.io/anchor/" />
+    <title>Zuros Browser</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="application/ld+json">
+      {"@context":"https://schema.org","@type":"WebSite","name":"Zuros Browser","url":"https://justicevincentnwanchor-sketch.github.io/anchor/","description":"A clean browser start page for searching and saving ideas."}
+    </script>
+  </head>
+  <body>
+    <main class="browser-shell">
+      <header class="browser-toolbar">
+        <div class="window-controls" aria-hidden="true">
+          <span class="window-dot close"></span><span class="window-dot minimize"></span><span class="window-dot expand"></span>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Browser tabs">
+          <button class="tab active" role="tab" aria-selected="true"><span class="tab-mark">✦</span><span>Zuros home</span><span class="tab-close">×</span></button>
+          <button class="new-tab" type="button" aria-label="Open a new tab">+</button>
+        </div>
+        <div class="toolbar-actions">
+          <button type="button" class="icon-button" aria-label="Minimize browser">−</button>
+          <button type="button" class="icon-button" aria-label="Toggle full screen">□</button>
+          <button type="button" class="icon-button close-button" aria-label="Close browser">×</button>
+        </div>
+      </header>
+
+      <nav class="navigation-bar" aria-label="Browser navigation">
+        <div class="nav-buttons">
+          <button class="nav-icon muted" type="button" aria-label="Go back">←</button>
+          <button class="nav-icon muted" type="button" aria-label="Go forward">→</button>
+          <button class="nav-icon" type="button" aria-label="Reload page" id="reloadButton">↻</button>
+        </div>
+        <form class="address-bar" id="addressForm">
+          <span class="site-lock" aria-hidden="true">⌁</span>
+          <input id="addressInput" aria-label="Address and search bar" value="zuros://home" autocomplete="off" />
+          <button class="address-action" type="button" aria-label="Bookmark this page">☆</button>
+        </form>
+        <button class="user-avatar" type="button" aria-label="Open profile">JV</button>
+        <button class="menu-button" type="button" aria-label="Open browser menu">•••</button>
+      </nav>
+
+      <section class="page-content">
+        <div class="ambient-line line-one"></div>
+        <div class="ambient-line line-two"></div>
+        <div class="content-inner">
+          <div class="topline"><span class="status-dot"></span><span>Thursday, September 13, 2026</span><span class="topline-rule"></span><span>09:41 AM</span></div>
+          <section class="welcome">
+            <p class="eyebrow">A quieter place to browse</p>
+            <h1>Make room<br /><em>for wonder.</em></h1>
+            <p class="intro">Search the web, revisit a good idea, or wander somewhere new.</p>
+            <form class="search-form" id="searchForm">
+              <span class="search-icon" aria-hidden="true">⌕</span>
+              <input id="searchInput" type="search" placeholder="Search the web or enter an address" autocomplete="off" />
+              <button type="submit">Search</button>
+            </form>
+            <div class="search-hint"><span class="key">⌘</span><span class="key">K</span><span>to focus search</span></div>
+          </section>
+
+          <section class="quick-section" aria-labelledby="quick-heading">
+            <div class="section-heading"><h2 id="quick-heading">Your places</h2><button type="button" class="text-button" id="editLinks">Edit <span>↗</span></button></div>
+            <div class="quick-links" id="quickLinks">
+              <a href="https://www.google.com" class="quick-link" target="_blank" rel="noreferrer"><span class="link-icon google">G</span><span><strong>Google</strong><small>Search</small></span><span class="link-arrow">↗</span></a>
+              <a href="https://github.com" class="quick-link" target="_blank" rel="noreferrer"><span class="link-icon github">⌘</span><span><strong>GitHub</strong><small>Workspaces</small></span><span class="link-arrow">↗</span></a>
+              <a href="https://www.are.na" class="quick-link" target="_blank" rel="noreferrer"><span class="link-icon arena">a</span><span><strong>Are.na</strong><small>Inspiration</small></span><span class="link-arrow">↗</span></a>
+              <button class="quick-link add-link" type="button" id="addLink"><span class="link-icon plus">+</span><span><strong>Add a place</strong><small>Make it yours</small></span></button>
+            </div>
+          </section>
+
+          <section class="bottom-grid">
+            <article class="note-panel">
+              <div class="panel-label"><span class="panel-icon">✎</span><span>Little note</span><span class="panel-menu">···</span></div>
+              <p id="note" contenteditable="true" spellcheck="false">What would you like to<br /><span>remember today?</span></p>
+              <div class="note-footer">Saved locally <span>•</span> just now</div>
+            </article>
+            <article class="weather-panel">
+              <div class="panel-label"><span class="panel-icon">☼</span><span>Outside</span><span class="panel-menu">···</span></div>
+              <div class="weather-readout"><strong>18°</strong><span>Partly cloudy<br /><small>Brooklyn, NY</small></span></div>
+              <div class="weather-footer"><span>Feels like 17°</span><span>↑ 21° &nbsp; ↓ 13°</span></div>
+            </article>
+          </section>
+          <footer class="page-footer"><span>Zuros Browser</span><span class="footer-leaf">✦</span><span>Made for the curious</span></footer>
+        </div>
+      </section>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="app.js"></script>
+  </body>
+</html>
